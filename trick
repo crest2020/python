@@ -5,3 +5,11 @@ for i in f:
 	print(l)
 
                 
+
+
+for i in f:
+	list=[]
+	ii=i.strip('\n')
+	l=ii.split(' ')
+	for j in range(1,len(l)):
+		print(l[0],l[j])
