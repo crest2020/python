@@ -1,0 +1,7 @@
+for i in f:
+	list=[]
+	ii=i.strip('\n')
+	l=ii.split(' ')
+	print(l)
+
+                
