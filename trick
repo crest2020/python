@@ -33,6 +33,11 @@ def  countnucFrequency(seq):
 		Frequency[nuc]+=1
 	return Frequency
 
+def transcription(seq):
+	seq=seq.replace('T','U')
+	return seq
+
+
 
 	
 
