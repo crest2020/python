@@ -37,6 +37,18 @@ def transcription(seq):
 	seq=seq.replace('T','U')
 	return seq
 
+def gc_count(seq):
+	return (seq.count('C')+seq.count('G'))/len(seq)*100
+	
+
+def gc_count_window(seq,k):
+	res=[]
+	for i in range(0,len(seq)-k+1,k):
+		temp=gc_count(seq[i:i+k])
+		res.append(temp)
+	return res
+
+
 
 
 	
