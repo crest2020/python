@@ -20,5 +20,19 @@ def count1(ll):
 	for i in range(len(ll)):
 		s[ll[i]]+=1
 	return s
+
+def validateseq(dna_seq):
+	temseq=dna_seq.upper()
+	for nuc in temseq:
+		if nuc not in nuclotides:
+			return False
+	return temseq
+def  countnucFrequency(seq):
+	Frequency={'A':0,'C':0,'G':0,'T':0}
+	for nuc in seq:
+		Frequency[nuc]+=1
+	return Frequency
+
+
 	
 
