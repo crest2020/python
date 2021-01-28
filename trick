@@ -88,6 +88,37 @@ def translate_seq(seq,init_pos=0):
 			#print(temp)
 			res.append(DNA_codens[temp])
 	return ''.join(res)
+	
+钢条切割问题
+p=[0,1,5,8,9,10,17,17,20,21,23,24,26,27,28,30,33,36,39,40]
+def cut_rod3(p,n):
+	r=[0]
+	for i in range(1,n+1):
+		res=0
+		for j in range(1,i+1):
+			res=max(res,p[j]+r[i-j])
+		r.append(res)
+	return r[n]
+	
+def cut_rod2(p,n):
+	if n==0:
+		return 0
+	else:
+		res=p[n]
+		for i in range(1,n):
+			res=max(res,p[i]+cut_rod2(p,n-i))
+		return res
+
+def cut_rod1(p,n):
+	if n==0:
+		return 0
+	else:
+		res=p[n]
+		for i in range(1,n):
+			res=max(res,cut_rod1(p,i)+cut_rod1(p,n-i))
+	return res
+
+
 
 	
 
