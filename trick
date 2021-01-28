@@ -88,6 +88,33 @@ def translate_seq(seq,init_pos=0):
 			#print(temp)
 			res.append(DNA_codens[temp])
 	return ''.join(res)
+
+def read_frame(seq):
+	res=[]
+	frame0=translate_seq(r,0)
+	frame1=translate_seq(r,1)
+	frame2=translate_seq(r,2)
+	res=[frame0,frame1,frame2]
+	return res
+#寻找阅读框内有效的翻译序列	
+def read_frame_transcript(aa_seq):
+	m=[]
+	protein=[]
+	for aa in aa_seq:
+		if aa=='*':
+			for p in m:
+				protein.append(p)
+			break
+		else:
+			if aa=='M':
+				m.append('')
+			for i in range(len(m)):
+				m[i]+=aa
+
+
+	return protein
+
+
 	
 钢条切割问题
 p=[0,1,5,8,9,10,17,17,20,21,23,24,26,27,28,30,33,36,39,40]
