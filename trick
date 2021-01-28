@@ -118,6 +118,14 @@ def cut_rod1(p,n):
 			res=max(res,cut_rod1(p,i)+cut_rod1(p,n-i))
 	return res
 
+def cut_rod4_solution(p,n):
+	r,s=cut_rod4(p,n)
+	res=[]
+	while n>0:
+		res.append(s[n])
+		n-=s[n]
+	return res
+
 
 
 	
