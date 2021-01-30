@@ -1,0 +1,20 @@
+def three2(x):
+	n=set()
+	for i in range(10000):
+		b=[]
+		for j in range(3):
+			b.append(random.choice(x))
+			
+			c="".join(b)
+		
+		n.add(c)
+		
+	return n
+
+
+ def three(a):
+	n=set()
+	for i in range(10000):
+		n.add(''.join(map(str,random.sample(a,3))))
+	return n
+ 
