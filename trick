@@ -153,7 +153,14 @@ def cut_rod4_solution(p,n):
 		n-=s[n]
 	return res
 
+def fib(n):
+	fib_table=[0 for i in range(n+1)]
 
+	fib_table[1]=1
+	fib_table[2]=1
+	for i in range(3,n+1):
+		fib_table[i]=fib_table[i-1]+fib_table[i-2]
+	return fib_table[1:]
 
 	
 
