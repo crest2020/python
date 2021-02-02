@@ -1,0 +1,12 @@
+from collections import defaultdict
+def dict_count(string):
+	s=defaultdict(int)
+	d=string.split()
+	for i in d:
+		s[i]+=1
+	for key in s.keys():
+		print(key,s[key])
+    
+    
+    
+    
