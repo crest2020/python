@@ -1,3 +1,15 @@
+def read_even(name):
+	l=[]
+	with open(name,mode='r') as f:
+		for i,j in enumerate(f.readlines()):
+			if i%2==1:
+				l.append(j)
+	with open('result.txt','w') as f2:
+		f2.writelines(l)
+
+
+
+
 for i in f:
 	list=[]
 	ii=i.strip('\n')
