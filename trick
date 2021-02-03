@@ -1,3 +1,9 @@
+import re
+re.split(r'[\t;" ]\s*',n)
+切割文本
+
+
+
 def read_even(name):
 	l=[]
 	with open(name,mode='r') as f:
