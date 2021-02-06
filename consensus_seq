@@ -1,0 +1,42 @@
+file = "C:\\Users\\hp\\Desktop\\consensus.txt"
+def consensus(file):
+    with open(file, 'r') as f:
+
+        d={}
+        for i in f.readlines():
+            i = i.strip()
+            if '>' in i:
+
+                d[i] = ''
+                tmp=i
+
+            else:
+                d[tmp] += i
+        return d
+     
+d=consensus(file)
+l=[]
+for i in d.keys():
+    l.append(d[i])
+    
+matrix=zip(*l)
+
+def count_acgt(l):
+    ee={'A':0,'C':0,'G':0,'T':0}
+
+    for i in l:
+        ee[i]+=1
+    max_key=max(ee,key=ee.get)
+    return max_key,ee
+
+
+result=[]
+con=[]
+for i in matrix:
+    m,n=count_acgt(i)
+    con.append(m)
+    result.append(n)
+print(con)
+print(result)
+    
+  
