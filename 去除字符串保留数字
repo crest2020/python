@@ -1,0 +1,28 @@
+import re
+def is_num(x):
+    decimal = re.compile(r'^[-+]?[0-9]+\.[0-9]+$')
+    num = re.compile(r'^[-+]?[0-9]+')
+    result = 1 if decimal.match(x) else num.match(x)
+
+    if result:
+        print "Number is a digit"
+    else:
+        print "Numer is not a digit"
+
+
+is_num('10')
+
+ll=['s','b','h',1,2,34]
+print((ll))
+
+def is_num_by_except(list):
+    l=[]
+    for i in ll:
+        try:
+            int(i)
+            l.append(i)
+        except ValueError:
+            pass
+    print l
+
+is_num_by_except(ll)
